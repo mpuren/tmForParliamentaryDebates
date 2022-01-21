@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import re
 
 
-path_data = "C:/Users/nicolas.bourgeois/Desktop/Backup/Recherche/articles/puren_methodo/methodo"
+path_data = "insert your local path"
 revue = "cb328020951"
 
 

@@ -8,7 +8,7 @@ from collections import Counter
 import pandas as pd
 import numpy as np
 
-path_data = "C:\\Users\\nicolas.bourgeois\\Desktop\\Backup\\Recherche\\articles\\puren_methodo\\methodo"
+path_data = "insert your local path to data"
 
 
 def dictionnaires() -> Tuple[Set[str], Set[str], Set[str], Set[str], Set[str]]:
@@ -149,9 +149,7 @@ def coocurences(ocr: str) -> None:
 
 if __name__ == "__main__":
     motsfr, lemsfr, stopsfr, lemstopsfr, proprescommuns = dictionnaires()
-    # comptage_par_date()
-    # ngram(["communiste", "ordre", "boulanger", "eglise", "guerre"])
-    # test_ocr("jo33.jpg")
-    # sort_years("ocr", "ocr_sorted")
+    comptage_par_date()
+    sort_years("ocr", "ocr_sorted")
     compute_frequences("ocr_sorted", "comptage_lemmes")
     combine_frequences("comptage_lemmes", "comptage_annees")

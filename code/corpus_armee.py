@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, confu
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import SVC
 
-path_data = r"C:\Users\nicolas.bourgeois\Desktop\Backup\Recherche\articles\puren_methodo\methodo"
+path_data = r"insert your local path here"
 stop_words = set(open(os.path.join(path_data, "french_stopwords.txt"), "r").read().split("\n"))
 fr_words = set(open(os.path.join(path_data, "french_words.txt"), "r").read().split("\n"))
 
@@ -192,11 +192,11 @@ def build_classify() -> Tuple[MultinomialNB, SVC]:
 
 if __name__ == "__main__":
     tableau_sans_etiquetage_maj(2000)
-    # tableau_sans_etiquetage(6000)
-    # train_data, test_data, apply_data = extract_material()
-    # if os.path.exists(os.path.join(path_data, f"topwords.txt")):
-    #     top_words = open(os.path.join(path_data, f"topwords.txt"), 'r').read().split("\n")
-    # else:
-    #     top_words = most_freq(train_data, 800)
-    # build_matrices(train_data, test_data, apply_data)
-    # build_classify()
+    tableau_sans_etiquetage(6000)
+    train_data, test_data, apply_data = extract_material()
+    if os.path.exists(os.path.join(path_data, f"topwords.txt")):
+        top_words = open(os.path.join(path_data, f"topwords.txt"), 'r').read().split("\n")
+    else:
+        top_words = most_freq(train_data, 800)
+    build_matrices(train_data, test_data, apply_data)
+    build_classify()

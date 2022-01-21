@@ -8,7 +8,7 @@ import numpy as np
 import os
 import shutil
 
-path_data = r"C:\Users\nicolas.bourgeois\Desktop\Backup\Recherche\articles\puren_methodo\methodo"
+path_data = "insert your local path"
 classes = {
     "names of MP": [0, 5, 10, 14, 18, 23, 35, 37, 39],
     "government/parliament": [1, 6, 9, 13, 17, 19, 22, 36, 38, 41, 45, 46, 49],
@@ -146,8 +146,8 @@ def timeline_corr():
 
 
 if __name__ == "__main__":
-    # build_classes(classes)
-    # co_frequences = matrice_corr()
-    # draw_graph(co_frequences)
+    build_classes(classes)
+    co_frequences = matrice_corr()
+    draw_graph(co_frequences)
     examples_corr()
-    # timeline_corr()
+    timeline_corr()
